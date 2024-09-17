@@ -19,7 +19,7 @@ class ViewController: UIViewController {
     @IBAction func gotoSeconScreen(_ sender: Any) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         if let second = storyboard.instantiateViewController(withIdentifier: "portakal") as? SecondViewController {
-            second.modalTransitionStyle = .coverVertical
+            second.modalTransitionStyle = .crossDissolve //UIModalTransitionStyle.crossDissolve
            
             let name = txtName.text ?? ""
             let surName = txtSurname.text ?? ""
