@@ -17,7 +17,16 @@ class ViewController: UIViewController {
     }
 
     @IBAction func gotoSeconScreen(_ sender: Any) {
-        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        if let second = storyboard.instantiateViewController(withIdentifier: "portakal") as? SecondViewController {
+            second.modalTransitionStyle = .coverVertical
+           
+            let name = txtName.text ?? ""
+            let surName = txtSurname.text ?? ""
+            second.str = "\(name) \(surName)"
+            
+            self.present(second, animated: true)
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
