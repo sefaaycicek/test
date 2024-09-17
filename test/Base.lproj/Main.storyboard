@@ -1,24 +1,105 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="test" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZhR-j1-bq3">
+                                <rect key="frame" x="151" y="421" width="91" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Giriş Yap"/>
+                                <connections>
+                                    <segue destination="sPH-RH-L3p" kind="presentation" modalTransitionStyle="crossDissolve" id="8y0-oj-gff"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Adınızı Giriniz" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aDp-sj-y6o">
+                                <rect key="frame" x="16" y="325" width="361" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Soyadınızı Giriniz" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xel-9d-Hfd">
+                                <rect key="frame" x="16" y="371" width="361" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OLh-nz-LkU">
+                                <rect key="frame" x="128.66666666666666" y="481" width="135.99999999999997" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Giriş Yap Code"/>
+                                <connections>
+                                    <action selector="gotoSeconScreen:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Sxi-ct-6wI"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemRedColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xel-9d-Hfd" secondAttribute="trailing" constant="16" id="8V9-h9-xq5"/>
+                            <constraint firstItem="xel-9d-Hfd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Cow-NO-46q"/>
+                            <constraint firstItem="aDp-sj-y6o" firstAttribute="trailing" secondItem="xel-9d-Hfd" secondAttribute="trailing" id="RRF-n1-5za"/>
+                            <constraint firstItem="OLh-nz-LkU" firstAttribute="centerX" secondItem="ZhR-j1-bq3" secondAttribute="centerX" id="Xgi-iS-KWP"/>
+                            <constraint firstItem="ZhR-j1-bq3" firstAttribute="top" secondItem="xel-9d-Hfd" secondAttribute="bottom" constant="16" id="ZvX-UM-Ibx"/>
+                            <constraint firstItem="ZhR-j1-bq3" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="ghT-33-Zvq"/>
+                            <constraint firstItem="OLh-nz-LkU" firstAttribute="top" secondItem="ZhR-j1-bq3" secondAttribute="bottom" constant="25" id="ihX-gA-acI"/>
+                            <constraint firstItem="ZhR-j1-bq3" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="nW3-og-l5e"/>
+                            <constraint firstItem="aDp-sj-y6o" firstAttribute="leading" secondItem="xel-9d-Hfd" secondAttribute="leading" id="uHD-1f-dwp"/>
+                            <constraint firstItem="xel-9d-Hfd" firstAttribute="top" secondItem="aDp-sj-y6o" secondAttribute="bottom" constant="12" id="znu-BV-S9y"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="txtName" destination="aDp-sj-y6o" id="bDJ-pf-X45"/>
+                        <outlet property="txtSurname" destination="xel-9d-Hfd" id="Xm7-9N-CdA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-344.27480916030532" y="-151.40845070422537"/>
+        </scene>
+        <!--Second View Controller-->
+        <scene sceneID="fc2-4P-G5G">
+            <objects>
+                <viewController storyboardIdentifier="portakal" id="sPH-RH-L3p" customClass="SecondViewController" customModule="test" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="csc-YL-8d9">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ou7-NK-BpC">
+                                <rect key="frame" x="48" y="80" width="62" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Back"/>
+                                <connections>
+                                    <action selector="onBackTapped:" destination="sPH-RH-L3p" eventType="touchUpInside" id="lBx-j3-XDF"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="asc-nc-AvA"/>
+                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mXk-Tt-eMl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="634" y="-150"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
